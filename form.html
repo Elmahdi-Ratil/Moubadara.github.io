@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADMoubadara</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel=" stylesheet" href="css/slick.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" />
+  <style>
+    body {
+      background-color: hsl(0, 0%, 95%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-overlay"></div>
+  <header class="header-default">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-xl">
+        <!-- logo  -->
+        <a href="index.html" class="navbar-brand">
+          <img src="images" alt="" />
+        </a>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link dropdown-toggle">الصفحه الرئيسيه</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="form.html" class="dropdown-item active">استمارة الترشح</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="process.html" class="nav-link">قروض الشرف</a>
+            </li>
+            <li class="nav-item">
+              <a href="trainning.html" class="nav-link">تأطير و مواكبة</a>
+            </li>
+            <li class="nav-item">
+              <a href="post.html" class="nav-link">الأخبار</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">من نحن ؟</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- right side of header  -->
+        <div class="header-right">
+          <ul class="social-icons list-unstyled list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+
+          <!-- buttons  -->
+          <div class="header-buttons">
+            <!--<button class="search icon-button">
+                                <i class="icon-magnifier"></i>
+                            </button> -->
+            <button class="burger-menu icon-button">
+              <span class="burger-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- section starts  -->
+<section>
+  <div class="container mt-5">
+    <div class="cardform">
+      <form method="POST">
+        <!-- Card header -->
+        <div class="card-header">
+          <h4 class="fw-bold">استمارة الترشح</h4>
+        </div>
+
+        <!-- Card body -->
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="exampleInput1" class="form-label">الاسم</label>
+            <input type="text" class="form-control" name="LastName" id="exampleInput1" required="required"
+              autocomplete="off" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInput2" class="form-label">النسب</label>
+            <input type="text" class="form-control" name="FirstName" id="exampleInput2" required="required"
+              autocomplete="off" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInput3" class="form-label">البريد الالكتروني</label>
+            <input type="email" class="form-control" name="Email" id="exampleInput3" required="required"
+              autocomplete="off" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInput4" class="form-label">رقم الهاتف</label>
+            <input type="tel" class="form-control" name="Phone" id="exampleInput4" required="required"
+              autocomplete="off" />
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="exampleInput5" class="form-label">تاريخ الازدياد</label>
+                <input type="date" max="3000-01-01" class="form-control" name="Date" id="exampleInput5"
+                  required="required" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="exampleInput6" class="form-label">الجنس</label>
+              <select id="exampleInput6" name="Sex" class="form-control mb-3" aria-label="Default select example"
+                required="required" autocomplete="off">
+                <option selected value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInput7" class="form-label">العنوان</label>
+            <input type="text" class="form-control" name="Adresse" id="exampleInput7" required="required"
+              autocomplete="off" />
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <div class="mb-3">
+                <label for="exampleInput8" class="form-label">المدينة</label>
+                <input type="text" class="form-control" name="City" id="exampleInput8" required="required"
+                  autocomplete="off" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card footer -->
+        <div class="card-footer">
+          <button type="submit" onclick="sendemail()" class="btnform btn-primary">
+            تسجيل
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="container-xl">
+      <div class="footer-inner">
+        <div class="row d-flex align-items-center gy-4">
+          <div class="col-md-4">
+            <span class="copyright">&copy; جميع الحقوق محفوظة الداخلة مبادرة 2022</span>
+          </div>
+          <div class="col-md-4 text-center">
+            <ul class="social-icons list-unstyled list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <a href="#" id="return-to-top" class="float-md-end">
+              <i class="icon-arrow-up"></i>
+              العودة إلى أعلى الصفحة
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+
+  <!-- canvas menu  -->
+  <div class="canvas-menu d-flex align-items-end flex-column">
+    <button class="btn-close" aria-label="Close" type="button"></button>
+
+    <div class="logo">
+      <img src="images/" alt="">
+    </div>
+    <nav>
+      <ul class="vertical-menu">
+        <li class="">
+          <a href="index.html">الصفحه الرئيسيه</a>
+          <ul class="submenu">
+            <li class="active"><a href="form.html">استمارة الترشح</a></li>
+          </ul>
+        </li>
+        <li><a href="process.html">قروض الشرف</a></li>
+        <li><a href="trainning.html">تأطير و مواكبة</a></li>
+        <li><a href="post.html">الأخبار</a></li>
+        <li><a href="about.html">من نحن ؟</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+
+
+    <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
+      <li class="list-inline-item">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- search pop up  
+<div class="search-popup">
+  <button class="btn-close" aria-label="Close" type="button"></button>
+
+  <div class="search-content">
+      <div class="text-center">
+          <h3 class="mb-4 mt-0">Press ESC to close</h3>
+      </div>
+
+      <form action="" class="d-flex search-form">
+          <input type="search" placeholder="Search and press enter ..." aria-label="Search"
+              class="form-control me-2">
+          <button class="btn btn-default btn-lg" type="submit">
+              <i class="icon-magnifier"></i>
+          </button>
+      </form>
+  </div>
+</div>
+-->
+
+  <script>
+    //// kvqkimbeixkpdhbz Function to send the message when click on button send
+
+    function sendemail() {
+      var exampleInput1 = $("#exampleInput1").val();
+      var exampleInput2 = $("#exampleInput2").val();
+      var exampleInput3 = $("#exampleInput3").val();
+      var exampleInput4 = $("#exampleInput4").val();
+      var exampleInput5 = $("#exampleInput5").val();
+      var exampleInput6 = $("#exampleInput6").val();
+      var exampleInput7 = $("#exampleInput7").val();
+      var exampleInput8 = $("#exampleInput8").val();
+
+      var body =
+        " الاسم : " +
+        exampleInput1 +
+        "<br> النسب : " +
+        exampleInput2 +
+        "<br>  البريد الالكتروني : " +
+        exampleInput3 +
+        "<br>  رقم الهاتف : " +
+        exampleInput4 +
+        "<br>  تاريخ الازدياد : " +
+        exampleInput5 +
+        "<br>  الجنس : " +
+        exampleInput6 +
+        "<br>  العنوان : " +
+        exampleInput7 +
+        "<br>  المدينة : " +
+        exampleInput8;
+
+      ///// Function Send Email
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "elmahdiratildev@gmail.com",
+        Password: "C145156365BB5F5CE09D31645B4FB2075B3A",
+        To: "mahdijak4@gmail.com",
+        From: "elmahdiratildev@gmail.com",
+        Subject: "استمارة الترشح",
+        Body: body,
+      }).then((message) => alert(message));
+    }
+  </script>
+
+  <!-- javascripts  -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.sticky-sidebar.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
