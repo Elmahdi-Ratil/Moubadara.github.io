@@ -78,12 +78,17 @@
     float: left;
 
     height: 100%;
-    min-height: 1px;
+    height: 250px;
 }
 [dir='rtl'] .slick-slide
 {
     float: right;
-}
+    padding: 40px 0;
+    position: relative;
+    height: auto !important;
+    opacity: 0.5;
+    transition: all 900ms ease;
+}   
 .slick-slide img
 {
     display: block;

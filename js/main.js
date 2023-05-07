@@ -3,8 +3,9 @@ $(document).ready(function () {
 
     $(".post-carousel-twoCol").slick({
         dots: false,
+        autoplay: true,
         arrows: false,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToSCroll: 1,
         responsive: [
             {
